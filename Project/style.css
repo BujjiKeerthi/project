@@ -1,0 +1,363 @@
+/* Import Google font - Poppins */
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-size:cover;
+    background-position: center;
+    
+    
+}
+.head{
+    position: absolute;
+    color: white;
+    margin-top: -651px;
+    left:500px;
+
+    }
+
+.HEAD{
+    margin-top: 120px;
+}
+body{
+    background-image:url('./image2.webp') ;
+
+}
+a {
+    text-decoration: none;
+}
+section{
+    max-width: 100%;
+    min-width: 25%;
+}
+
+.header{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    padding: 0px 20px;
+}
+.nav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.nav,
+.nav_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav_log{
+    font-size: 25px;
+}
+
+.nav_item{
+column-gap: 25px;
+}
+.nav_log,
+.nav_link,
+.button{
+    color: #ffff;
+}
+.nav_link:hover{
+    color: #d9d9dd  ;
+
+}
+.button{
+    padding: 6px 20px;
+    background: transparent;
+    border: 1px solid #ffff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:active{
+    transform: scale(0.98);
+}
+
+/* Home */
+.home{
+    position: relative;
+    height: 100vh;
+}
+.home::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition:all 0.5s ease-out;
+}
+
+.home.show::before{
+    opacity: 1;
+    pointer-events: auto;
+  
+}
+
+
+/* form */
+.form_container{
+    max-width: 350px;
+    width: 100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(1.2);
+    z-index: 101;
+    background-color:#ffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: rgba(0,0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition:all  0.4s ease-out;
+    
+}
+.home.show .form_container {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%,-50%) scale(1);
+}
+.signup_form{
+    display:none;
+}
+
+
+
+.form_close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color:#0b0217;
+    font-size:22px;
+    opacity:0.7;
+    cursor: pointer;
+}
+
+
+.form_container h2{
+    font-size: 22px;
+    text-align: center;
+    color:#7d2ae8;
+    
+}
+
+
+.input_box{
+    position: relative;
+    margin-top:30px;
+    width: 100%;
+    height: 40px;
+}
+
+
+.input_box input{
+    height: 100%;
+    width:100%;
+    padding: 0 25px;
+    border:none;
+    outline: none;;
+    transform: all 0.2s ease ;
+    border-bottom:2px solid #aaaaaa;
+
+}
+.input_box input:focus {
+    color: #7d2ae8;
+}
+
+.input_box i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.input_box i.email,
+.input_box i.password{
+    left: 0;
+}
+.input_box input:focus ~i.email,
+.input_box input:focus ~i.password{
+color:#7d2ae8;
+}
+.input_box i.pw_hide{
+    right: 0;
+}
+.option_field{
+    display: flex;
+    column-gap: 120px;
+    padding: 12px;
+    margin-left: -12px;
+    margin-top:10px ;
+}
+
+.check_box{
+    white-space: nowrap;
+    display: flex;
+    font-size:12px ;
+    cursor: pointer;
+
+}
+.check_box input{
+    accent-color: #7d2ae7;
+    cursor: pointer;
+}
+
+.check_box label{
+    cursor: pointer;
+}
+
+.forgot_pw{
+    color: #7d2ae8;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.forgot_pw:hover{
+    text-decoration: underline;
+}
+
+.form_container .button{
+    background-color: #7d2ae7;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.login_signup{
+    font-size: 12px;
+    text-align: center;
+    margin-top:12px;
+}
+.simple{
+    display: flex;
+    position:absolute;
+    height: 300px;
+    width: 25%;
+    top: 250px;
+    left:100px;
+    position: relative;
+    /* justify-content: space-around; */
+    
+    
+    
+}
+.simple:hover{
+    transition: all 0.8s;
+    
+}
+.div1{
+    position: absolute;
+    top: -750px;
+    height: 60vh;
+    /* width: 100%; */
+    /* justify-content: space-evenly; */
+    background-image:url('./image2.webp');
+    border:2px solid rgb(79, 78, 78);
+    margin-left: 50px;
+    background-color: #d9d9dd;
+}
+.div1:hover{
+    box-shadow: 2px 4px 8px 3px rgb(248, 248, 248), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.div2{
+    position: absolute;
+    top: -750px;
+    height: 60vh;
+    /* width: 100%; */
+    width: 500px;
+    /* justify-content: space-evenly; */
+    background-image:url('./image2.webp');
+    border:2px solid rgb(79, 78, 78);
+    margin-left: 750px;
+}
+.div2 img{
+    margin-left: 150px;
+    background-color: transparent;
+}
+#btn{
+    margin-left: 180px;
+}
+
+.div2:hover{
+    box-shadow: 2px 4px 8px 3px rgb(248, 248, 248), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    
+
+}
+
+
+.imag{
+    height: 300px;
+    padding: 20px;
+    margin-left: 2px;
+    background-color: transparent;
+}
+
+.btn{
+    padding: 12px;
+    border-radius: 12px;
+    background-color:#7d2ae7;
+    color:white;
+    margin-left: 170px;
+    margin-top: 12px;
+    width: 150px;
+
+
+
+}
+
+.btn:hover{
+    background-color: white;
+    color:black;
+    transition: 0.5s  ease-in ;
+}
+
+.btn a{
+    color: white;
+}
+.btn a:hover{
+    color:black;
+}
+
+
+
+.foot{
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.sent{
+    margin:160px;
+
+}
+
+.copy{
+    margin: -140px;
+}
+
+/* .sent{
+    margin-bottom: -110px;
+}
+
+.copy{
+    margin-top: 120px;
+} */
+

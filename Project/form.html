@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- coding by:TEAM VISION -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="s.css">
+    <title>Responsive Registration Form</title>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="row"></div>
+        <header>Resume</header>
+        <form action="#">
+            
+                <div class="form_first" id="form_first">
+                    <div class="details personal">
+                        <span class="title">Personal Details </span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Date of Birth</label>
+                                <input type="date" placeholder="Enter your date of birth" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Email ID</label>
+                                <input type="text" placeholder="Enter your Email id" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Mobile Number</label>
+                                <input type="number" placeholder="Enter your mobile number" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Gender</label>
+                                <input type="text" placeholder="Enter your gender" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Qualification</label>
+                                <input type="text" placeholder="Enter your qualification" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Identity Details </span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" placeholder="Enter your Nationality" required>
+                        </div>
+                        <div class="input-field">
+                            <label>ID Type</label>
+                            <input type="text" placeholder="Enter ID Type" required>
+                        </div>
+                        <div class="input-field">
+                            <label>ID Number</label>
+                            <input type="text" placeholder="Enter ID Number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Issued state</label>
+                            <input type="text" placeholder="Enter Issued state" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Address</label>
+                            <input type="text" placeholder="Enter your address" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Pincode</label>
+                            <input type="number" placeholder="Enter Pincode" required>
+                        </div>
+                    </div>
+                    <button class="nextBtn" onclick="printForm()">Print Form</button>
+                </button>
+                </button>
+                </div>
+                
+            </div>
+
+            </div>
+        </form>
+    </div>
+    <script>
+        function printForm() {
+            var printContents = document.getElementById('form_first').outerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+</body>
+
+</html>
